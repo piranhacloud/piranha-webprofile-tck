@@ -10,6 +10,17 @@
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Piranha Web Profile TCK - Project</name>
+    <properties>
+        <!-- dependencies -->
+        <annotations.tck.version>3.0.0</annotations.tck.version>
+        <!-- other -->
+        <piranha.version>25.1.0-SNAPSHOT</piranha.version>
+        <!-- plugins -->
+        <sigtest-maven-plugin.version>2.2</sigtest-maven-plugin.version>
+    </properties>
+    <modules>
+        <module>annotations</module>
+    </modules>
     <repositories>
         <repository>
             <id>jakartaee-staging</id>
