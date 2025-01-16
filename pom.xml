@@ -13,14 +13,53 @@
     <properties>
         <!-- dependencies -->
         <annotations.tck.version>3.0.0</annotations.tck.version>
+        <junit.version>5.11.4</junit.version>
         <!-- other -->
+        <java.version>21</java.version>
         <piranha.version>25.1.0-SNAPSHOT</piranha.version>
         <!-- plugins -->
-        <sigtest-maven-plugin.version>2.2</sigtest-maven-plugin.version>
+        <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
+        <maven-failsafe-plugin.version>3.5.2</maven-failsafe-plugin.version>
+        <sigtest-maven-plugin.version>2.4</sigtest-maven-plugin.version>
     </properties>
     <modules>
         <module>annotations</module>
     </modules>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>${maven-antrun-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${maven-failsafe-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.version}</version>
+            </dependency>        
+        </dependencies>
+    </dependencyManagement>
     <repositories>
         <repository>
             <id>jakartaee-staging</id>

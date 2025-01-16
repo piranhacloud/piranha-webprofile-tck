@@ -37,6 +37,12 @@
                 <artifactId>jakarta-annotations-tck</artifactId>
                 <version>${annotations.tck.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
